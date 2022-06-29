@@ -1,6 +1,6 @@
 import express from "express";
 import { runCode } from "./runCode.js";
-import { errorHandler, notFound } from "./middelwares.js";
+import { errorHandler, notFound } from "./middlewares.js";
 import cors from "cors";
 const app = express();
 
