@@ -1,10 +1,12 @@
 import express from "express";
 import { runCode } from "./runCode.js";
 import { errorHandler, notFound } from "./middelwares.js";
+import cors from "cors";
 const app = express();
 
 const port = process.env.PORT || 1337;
 
+app.use(cors());
 app.use(express.json());
 app.get("/", (req, res) => {
   res.json({
