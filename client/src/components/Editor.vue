@@ -41,6 +41,9 @@ textarea {
   width: 100%;
   background: #adbac7;
   font-size: 1.25rem;
+  outline: none;
+  resize: none;
+  border: none;
 }
 
 .arguments-label {
