@@ -10,7 +10,7 @@
         :tab-size="2"
         :extensions="extensions"
       />
-      <lable for="arguments" class="arguments-label">Input</lable>
+      <label for="arguments" class="arguments-label">Input</label>
       <textarea v-model="args" name="arguments" id="arguments"></textarea>
       <div class="submit-btn-wrap">
         <button class="submit-btn" @click="runCode">submit</button>
@@ -37,21 +37,24 @@ pre.error {
   background: rgb(252, 127, 127);
 }
 textarea {
+  padding: 1rem;
   width: 100%;
   background: #adbac7;
   font-size: 1.25rem;
-  margin: 1rem 0;
 }
 
 .arguments-label {
   color: #adbac7;
   font-size: 1.4rem;
   font-weight: bold;
+  margin: 1rem 0;
+  display: inline-block;
 }
 
 .output-label {
   color: #adbac7;
   font-size: 1.4rem;
+  margin: 1rem 0;
 }
 .code {
   background: #adbac7;
