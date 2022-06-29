@@ -103,7 +103,7 @@ console.log(arg1+arg2)`);
 
     async function runCode() {
       console.log(code.value, args.value);
-      const response = await fetch(`${import.meta.SERVER_URL}/run`, {
+      const response = await fetch(`${import.meta.env.VITE_SERVER_URL}/run`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
