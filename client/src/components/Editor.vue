@@ -4,20 +4,21 @@
       <codemirror
         v-model="code"
         placeholder="Code goes here..."
-        :style="{ height: '400px', width: '100%' }"
+        :style="{ height: '400px', width: '100%', fontSize: '1rem' }"
         :autofocus="true"
         :indent-with-tab="true"
         :tab-size="2"
         :extensions="extensions"
       />
+      <lable for="arguments" class="arguments-label">Input</lable>
       <textarea v-model="args" name="arguments" id="arguments"></textarea>
-      <div>
-        <button @click="runCode">submit</button>
+      <div class="submit-btn-wrap">
+        <button class="submit-btn" @click="runCode">submit</button>
       </div>
     </div>
     <div class="output">
-      <h1>Output</h1>
-      <pre :class="{ error: isError }">
+      <h1 class="output-label">Output</h1>
+      <pre class="code" :class="{ error: isError }">
         {{ output }}
       </pre>
     </div>
@@ -29,12 +30,46 @@ pre {
   padding: 1rem;
   background: #f3f7f7;
   color: #262b2e;
+  font-size: 1.25rem;
+  white-space: pre-line;
 }
 pre.error {
   background: rgb(252, 127, 127);
 }
 textarea {
   width: 100%;
+  background: #adbac7;
+  font-size: 1.25rem;
+  margin: 1rem 0;
+}
+
+.arguments-label {
+  color: #adbac7;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.output-label {
+  color: #adbac7;
+  font-size: 1.4rem;
+}
+.code {
+  background: #adbac7;
+}
+
+.submit-btn {
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(173, 186, 199, 0.26);
+  border-radius: 2px;
+  margin: 0.5rem;
+  background: #2d333b;
+  color: white;
+  cursor: pointer;
+  margin: 1rem 0;
+}
+
+.submit-btn:hover {
+  background: #262b2e;
 }
 </style>
 <script>
