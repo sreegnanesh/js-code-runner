@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "start": "node src/index.js",
-    "dev": "nodemon src/index.js --ignore src/temp"
+    "dev": "nodemon src/index.js --ignore src/temp",
+    "mainServer": "node src/server.js"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +15,7 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.18.1",
-    "nanoid": "^4.0.0"
+    "nanoid": "^4.0.0",
+    "node-fetch": "^3.2.6"
   }
 }
