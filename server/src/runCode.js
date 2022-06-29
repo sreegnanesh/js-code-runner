@@ -25,7 +25,9 @@ async function runCode(code, args) {
 
     await writeFile(`src/temp/${fileId}.js`, fullCode);
 
-    const { stderr, stdout } = await exec("node", [`./src/temp/${fileId}.js`]);
+    const { stderr, stdout } = await exec("node", [`./src/temp/${fileId}.js`], {
+      timeout: 1000 * 5,
+    });
     await rm(`./src/temp/${fileId}.js`);
     if (stderr) {
       throw new Error(stderr);
