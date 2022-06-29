@@ -14,4 +14,4 @@ COPY . .
 
 EXPOSE 1337
 
-CMD [ "node", "src/index.js" ]
+CMD [ "node", "src/docker-server.js" ]
