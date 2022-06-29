@@ -103,7 +103,7 @@ console.log(arg1+arg2)`);
 
     async function runCode() {
       console.log(code.value, args.value);
-      const response = await fetch("http://localhost:1337/run", {
+      const response = await fetch("http://localhost:7331/run", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -116,6 +116,7 @@ console.log(arg1+arg2)`);
       const json = await response.json();
       if (json.status === "ok") {
         output.value = json.data;
+        isError.value = false;
       } else {
         isError.value = true;
         output.value = json.error;
