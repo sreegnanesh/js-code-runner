@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <header>Code Runner</header>
+  <header>JS Code Runner</header>
 </template>
 <style>
 header {
